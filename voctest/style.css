@@ -1,0 +1,7 @@
+@font-face {
+    font-family:"PHONETIC";
+    src:
+        url('fonts/PHONETIC.TTF')format("truetype");
+    src:
+        url('fonts/PHONETIC.woff')format("woff");
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <link href="style.css" rel="stylesheet">
+    <script src="js/scripts.js"></script>
+    <script type="module" src="js/database.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  </head>
+
+  <body>
+    <div class="banner">
+      <h1>單字檢測系統</h1>
+    </div>
+    <div class="container">
+      <div class="empty-div"></div>
+      <form>
+        <label for="startLetter">單字檢測：從</label>
+        <select id="startLetter" name="startLetter" required>
+          <option value="A" selected>A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
+          <option value="E">E</option>
+          <option value="F">F</option>
+          <option value="G">G</option>
+          <option value="H">H</option>
+          <option value="I">I</option>
+          <option value="J">J</option>
+          <option value="K">K</option>
+          <option value="L">L</option>
+          <option value="M">M</option>
+          <option value="N">N</option>
+          <option value="O">O</option>
+          <option value="P">P</option>
+          <option value="Q">Q</option>
+          <option value="R">R</option>
+          <option value="S">S</option>
+          <option value="T">T</option>
+          <option value="U">U</option>
+          <option value="V">V</option>
+          <option value="W">W</option>
+          <option value="X">X</option>
+          <option value="Y">Y</option>
+          <option value="Z">Z</option>
+        </select>
+        
+        <label for="endLetter">到</label>
+        <select id="endLetter" name="endLetter" required>
+        </select><br>
+
+        <label for="sheetName">單字範圍：</label>
+        <select id="sheetName" >
+          <option value="3-5:chosen">3-5級挑選版</option>
+          <option value="5552:chosen">1-6級簡易版</option>
+          <option value="1-6:chosen">1-6級挑選版</option>
+        </select><br>
+        
+        <label for="numToPick">單字數量：</label>
+        <input type="number" id="numToPick" name="numToPick" required value="5"><br>
+        
+        <input type="button" value="隨機抽選" onclick="pickWords()">
+        <input type="button" value="全部顯示" onclick="pickAllWords()"><br>
+        <div class="checkbox-container">
+          <input type="checkbox" id="myCheckbox">
+          <label for="myCheckbox" class="checkmark"></label>
+            排序
+        </div>
+      </form>
+      <div class="empty-div"> </div>
+    </div>
+    <div class="container" style="justify-content: flex-start;">
+      <div class="empty-div"> </div>
+      <div id="outputDiv"></div>
+      <div class="empty-div"> </div>
+
+    </div>
+    <div class="footer">
+      <p>&copy; 2024 單字檢測系統</p>
+    </div>
+
+  </body>
+</html>
